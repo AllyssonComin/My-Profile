@@ -10,3 +10,23 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar__spacing {
+  height: 10vh;
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar__font {
+  font-family: $my-font;
+  font-size: 25px;
+  color: white;
+
+  &:hover {
+    color: gray;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+}

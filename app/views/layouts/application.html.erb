@@ -5,14 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body><%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
+  <body>
+    <%= render "shared/flashes" %>
+    <div class="row m-0">
+      <div class="col-2 p-0">
+        <div class="side_bar--dimensions">
+          <div class="triangle_down"></div>
+          <div class="triangle_up"></div>
+        </div>
 
-    <%= yield %>
+      </div>
+      <div class="col-10 p-0">
+        <div class="navbar__spacing">
+          <%= render partial: "shared/navbar" %>
+        </div>
+
+        <div class="body__spacing">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
